@@ -55,6 +55,8 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}"]
+    ports:
+      - 5432:5432
      
   solr:
     image: ckan/ckan-solr:${SOLR_IMAGE_VERSION}
