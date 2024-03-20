@@ -1,4 +1,4 @@
-1. executa o comando docker-compose up  (possibilitar a subida de um ambiente docker com suas images respectivas)
+1. executa o comando docker-compose -f docker-compose up  (possibilitar a subida de um ambiente docker com suas images respectivas)
 2. para acessar o cli do ckan e utilizar todos os recursos disponiveis, docker exec -it <container_name> bash, assim teremos acesso ao bash do container
 3. para criar um usuário utilizei o comando. ckan -c ckan.ini sysadmin add marcusvinicius email=lowpoc.developer@gmail.com name=marcusvinicius
 4. par agerar dado fake, podemos utilizar o cli do ckan. ckan -c /etc/ckan/default/ckan.ini generate fake-data organization:

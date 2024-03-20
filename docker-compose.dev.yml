@@ -71,3 +71,13 @@ services:
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "redis-cli", "-e", "QUIT"]
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "marcusvinicius@email.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "TopicosAvancados!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - db
